@@ -1,0 +1,23 @@
+@model List<Book>
+
+<h1 class="text-center mt-2">All Books</h1>
+
+<div class="container mt-4">
+    <div class="row g-4">
+        @foreach (var book in Model)
+        {
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="card h-100 text-center">
+                    <a asp-controller="Book" asp-action="Detail" asp-route-id="@book.Id">
+                        <img class="card-img-top mx-auto" style="max-width: 100px; height: auto;" src="/img/@book.Image" alt="@book.Title">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">@book.Title</h5>
+                        <p class="card-text">@book.Author</p>
+                        <p class="text-success fw-bold">@book.Price</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
