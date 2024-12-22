@@ -1,0 +1,22 @@
+@model Student
+<h1>Create Student</h1>
+<hr>
+<form asp-controller="Student" asp-action="Create" method="post" class="mt-4">
+    <div class="mb-3">
+        <label asp-for="FirstName" class="form-label">First Name</label>
+        <input asp-for="FirstName" class="form-control" id="exampleFormControlInput1" placeholder="Selim">
+    </div>
+    <div class="mb-3">
+        <label asp-for="LastName">Last Name</label>
+        <input asp-for="LastName" class="form-control" id="exampleFormControlInput1" placeholder="Ozgur">
+    </div>
+    <div class="mb-3">
+        <label asp-for="Email">E-Mail</label>
+        <input asp-for="Email" class="form-control" id="exampleFormControlInput1" placeholder="selimozgur@gmail.com">
+    </div>
+    <div class="mb-3">
+        <label asp-for="Phone">Phone</label>
+        <input asp-for="Phone" class="form-control" id="exampleFormControlInput1" placeholder="+90 5555555555">
+    </div>
+    <button type="submit" class="btn btn-primary">Kaydet</button>
+</form>
